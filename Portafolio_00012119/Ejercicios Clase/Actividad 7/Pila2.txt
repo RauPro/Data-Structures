@@ -1,0 +1,11 @@
+Algoritmo 2
+pila=INICIA;
+if (pila == NULL and puntero del siguiente nodo apunta a NULL )
+		break
+else 
+	n=pop(pila)
+	i=pop(pila)
+
+cout<<i;
+push(pila,i);
+push(pila,n);
