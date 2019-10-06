@@ -1,0 +1,12 @@
+A-B/(C*D$E)
+A-B/(C*DE$)
+A-B/(CDE$*)
+AB-CDE$/
+
+((A+B)*C-(D-E)$(F+G))
+
+segundo
+((A+B)*C-(D-E))$(F+G)
+
+AB+C*-(DE-)$(FG+)
+AB+C*DE-FG+$
