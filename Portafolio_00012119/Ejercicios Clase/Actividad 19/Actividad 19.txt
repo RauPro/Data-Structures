@@ -1,0 +1,85 @@
+19
+ arbol balanceado utilizando los datos: 43, 21, 77, 58, 63, 15, 37,
+41, 72, 39, 95 y 70. Utilice como base el siguiente ´arbol:
+	 inicio 
+	       53
+    10,27       68,80
+    
+    insertando 43
+    
+
+            53
+    10,27       68,80
+         43
+
+insertando 21
+
+            53
+    10 27       68 80
+       21  43
+
+insertando 77
+
+            53
+    10 27       68   80
+       21  43      77
+
+insertando  58
+
+               53
+    10   27             68   80
+       21  43        58   77
+       
+insertando 63
+
+
+               53
+    10   27             68   80
+       21  43        5863    77
+insertando 15
+                53
+    10     27             68   80
+       1521  43        5863    77
+       
+       insertando 37
+       
+                  53
+    10     27             68   80
+       1521  4337        5863    77
+       
+       insertando 41
+       lleno entonces  subo valor de enmedio y balanceo 
+                  53
+     21      41             68   80
+   1015   2737  43     5863    77
+       
+insertando 72
+
+                   53
+     21      41             68     80
+ 1015   2737  43        5863    7277
+        
+insertando 39
+esta lleno subo arriba valor de en medio y balanceo
+                    (53)
+     (21      41 )            (68     80)
+	 |     |     |            |    |    |
+(10 15)(27 37 39)(43)    (58 63) (72 77)
+ 
+                    (53)
+     ( 21      39 )           ( 68       80 )
+     |    |     |              |     |     |
+ (10 15) (27 37) (41 43)  (58 63)  (72 77)
+
+insertando 95
+                      (53)
+     (21      39  )          ( 68      80 ) 
+    |       |    |             |    |    |
+(10 15)  (27 37) (41 43) (58 63) (72 77)  (95)
+ 
+ insertando 70 esta lleno balanceo 
+
+                            (53)
+     ( 21      39 )                   ( 68      77 )
+    |      |      |                    |     |    | 
+ (10 15)  (27 37)   (41 43)    (58 63)    (70 72)  (80 95)
