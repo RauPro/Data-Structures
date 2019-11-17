@@ -117,31 +117,20 @@ int main() {
 
     	push(&a,dato,name);
 	}
-    cout<<"Ingrese la cantidad de alumnos que se admitiran: ";
-	int n;cin>>n;
-	int acumulador;
-
     printList(a);
-    cout<<endl;
     /* ordenar la lista */
     MergeSort(&a); 
-  
     cout << "Lista ordenada \n"; 
     printList(a); 
-  	Node* b=a;
-	while(b !=NULL){
-		acumulador++;
-		b=b->next;
-	}
-	b=a;
-	for (int i=0;i<acumulador-n;i++){
-		b=b->next;
-	}
 	cout<<"---Personas admitidas---"<<endl;
-	while(b!=NULL){
-		cout<<b->nombre;
-		cout<<"Nota: "<<b->data<<endl;;
-		b=b->next;
+	while(a!=NULL){
+		if (a->data>6){
+		
+		cout<<a->nombre<<endl;
+		cout<<" Nota: "<<a->data<<endl;;
+	}
+		a=a->next;
+		
 	}
 
     return 0; 
