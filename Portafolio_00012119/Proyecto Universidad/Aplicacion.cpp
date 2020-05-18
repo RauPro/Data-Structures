@@ -1,6 +1,6 @@
 #include <iostream> 
 using namespace std; 
-/* Nodo como enlace */
+/* Creacion del NODO */
 struct Node { 
     int data;
 	string nombre; 
@@ -9,12 +9,13 @@ struct Node {
 /* Prototipos */
 Node* SortedMerge(Node* a, Node* b); 
 void cortarLista(Node* source, Node** frontRef, Node** backRef); 
-/* ordena la lista vinculada cambiando los punteros (no datos) */
+/* Esta funcion ordena la lista vinculada cambiando los punteros (no datos) */
 void MergeSort(Node** headRef) {
-    Node* head = *headRef; 
-    Node* a; 
+    Node* head = *headRef;// head contiene una lista** 
+    //Punteros auxiliares para dividir la lista
+	Node* a; 
     Node* b; 
-    /* Caso base 0 elementos o 1 elemento */
+    /* Caso base 0 elementos o 1 elemento cuando ya no se puede dividir */
     if ((head == NULL) || (head->next == NULL)) { 
         return; 
     } 
@@ -32,13 +33,13 @@ Node* SortedMerge(Node* a, Node* b)
 { 
     Node* result = NULL; 
   
-    /* Casos base */
+    /* Casos base elemento unico */
     if (a == NULL) 
         return (b); 
     else if (b == NULL) 
         return (a); 
   
-    /* Elige A y B, repite */
+    /* Elige A y B y comparamos..., repite */
     if (a->data <= b->data) { 
         result = a; 
         result->next = SortedMerge(a->next, b); 
@@ -54,7 +55,7 @@ Node* SortedMerge(Node* a, Node* b)
 /* Divide los nodos de la lista dada en mitades delantera y trasera,
     y devuelve las dos listas usando los parámetros de referencia.
     Si la longitud es impar, el nodo adicional debe ir en la lista frontal.
-    Utiliza la estrategia de puntero rápido / lento. */
+    Utiliza la estrategia de puntero fast / slow. */
 void cortarLista(Node* source, Node** frontRef, Node** backRef) 
 { 
     Node* fast; 
@@ -122,6 +123,7 @@ int main() {
     MergeSort(&a); 
     cout << "Lista ordenada \n"; 
     printList(a); 
+    //Las personas admitidas seran aquellas que tengan nota mayor o igual a 7
 	cout<<"---Personas admitidas---"<<endl;
 	while(a!=NULL){
 		if (a->data>6){
